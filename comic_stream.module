@@ -21,10 +21,22 @@ function comic_stream_menu() {
  * Implements a system form for us.
  */
 function comic_stream_admin() {
+  _comic_stream_get_dilbert();
   $form = array();
   $form['name'] = array(
     '#type' => 'textfield',
     '#title' => t('Yo...sup?'),
   );
   return system_settings_form($form);
+}
+
+function _comic_stream_get_dilbert() {
+  $url = "http://dilbert.com/";
+  $html = file_get_html ( $url );
+  $img_url = $html->find('div.STR_Image img');
+  $img_url = 'http://www.dilbert.com' . $img_url[0]->attr['src'];
+  $img_obj = drupal_http_request($img_url);
+  $comics_dir = 'public://comics';
+  file_prepare_directory($comics_dir, FILE_CREATE_DIRECTORY);
+  $created_file_obj = file_save_data($img_obj->data, $comics_dir . '/dilbert.gif');
 }
