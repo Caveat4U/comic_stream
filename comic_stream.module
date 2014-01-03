@@ -1,0 +1,28 @@
+<?PHP
+
+/*
+ * Implements hook_menu().
+ */
+function comic_stream_menu() {
+  $items = array();
+  $items['admin/settings/comic_stream'] = array(
+    'title' => t('Manage comic stream settings.'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('comic_stream_admin'),
+    'access arguments' => array('administer comic_stream settings'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+  return $items;
+}
+
+/*
+ * Implements a system form for us.
+ */
+function comic_stream_admin() {
+  $form = array();
+  $form['name'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Yo...sup?'),
+  );
+  return system_settings_form($form);
+}
