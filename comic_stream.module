@@ -2,6 +2,8 @@
 
 include 'includes/simple_html_dom.php';
 
+define('COMICS_DIR', 'public://comics');
+
 /*
  * Implements hook_menu().
  */
@@ -21,7 +23,9 @@ function comic_stream_menu() {
  * Implements a system form for us.
  */
 function comic_stream_admin() {
-  _comic_stream_get_dilbert();
+  //_comic_stream_get_dilbert();
+  _comic_stream_get_xkcd();
+  //comic_stream_cron();
   $form = array();
   $form['name'] = array(
     '#type' => 'textfield',
@@ -30,13 +34,84 @@ function comic_stream_admin() {
   return system_settings_form($form);
 }
 
+function _comic_stream_create_comic_node($file_obj, $source_url, $source_title, $node_title) {
+  $node = (object) array(
+    'title' => $node_title,
+    'type' => 'comic',
+    'language' => LANGUAGE_NONE,
+    'uid' => 1,
+  );
+  node_object_prepare($node);
+
+  $node->field_comic[LANGUAGE_NONE][0] = (array)$file_obj;
+  $node->field_source[LANGUAGE_NONE][0] = array(
+    'url' => $source_url,
+    'title' => $source_title,
+  );
+  node_save((object)$node);
+}
+
 function _comic_stream_get_dilbert() {
   $url = "http://dilbert.com/";
   $html = file_get_html ( $url );
-  $img_url = $html->find('div.STR_Image img');
-  $img_url = 'http://www.dilbert.com' . $img_url[0]->attr['src'];
+  $img = $html->find('div.STR_Image img');
+  $img_url = 'http://www.dilbert.com' . $img[0]->attr['src']; // Returns a relative path.
   $img_obj = drupal_http_request($img_url);
   $comics_dir = 'public://comics';
+  $today_string = date('m-d-y');
   file_prepare_directory($comics_dir, FILE_CREATE_DIRECTORY);
-  $created_file_obj = file_save_data($img_obj->data, $comics_dir . '/dilbert.gif');
+  $created_file_obj = file_save_data($img_obj->data, $comics_dir . '/dilbert '.$today_string.'.gif');
+  _comic_stream_create_comic_node($created_file_obj, $img_url, "Dilbert", "Dilbert Node Title");
+}
+
+function _comic_stream_get_xkcd() {
+  $today_string = date('m-d-y');
+  $url = "http://xkcd.com";
+  $html = file_get_html( $url );
+  $img = $html->find('div#comic img');
+  $img_url = $img[0]->attr['src']; // Returns an absolute path to comic.
+  $img_obj = drupal_http_request($img_url);
+
+  $comic_title = $html->find('div#middleContainer div#ctitle');
+  $comic_title = $comic_title[0]->nodes[0]->_[4];
+  
+  //@TODO - if img_obj == get_file(most_recent) then do nothing
+  $comics_dir = 'public://comics';
+  file_prepare_directory($comics_dir, FILE_CREATE_DIRECTORY);
+  $created_file_obj = file_save_data($img_obj->data, $comics_dir . '/xkcd '.$today_string.'.png', FILE_EXISTS_REPLACE);
+  $created_file_obj->title = decode_entities($img[0]->attr['title']);
+  _comic_stream_create_comic_node($created_file_obj, $img_url, "XKCD", $comic_title);
+  //return $created_file_obj;
+}
+
+
+
+//@TODO Figure out how to figure out if we're pulling new content or not.
+/**
+ *  Implements hook_cron().
+ */
+function comic_stream_cron() {
+  $last_run = variable_get('comic_stream_cron_last_run', 0);
+  //if error then variable_set to 0 to denote incomplete run
+  // 1 day has 86400 seconds...cool, huh?
+  // 500,025,600 minutes - I can measure a year in the life of someone in Rent.
+  if ((REQUEST_TIME - $last_run) > 86400) {
+    _comic_stream_get_dilbert();
+    _comic_stream_get_xkcd();
+    //End everything
+    variable_set('comic_stream_cron_last_run', REQUEST_TIME);
+    watchdog('actions', 'Fresh comics have been pulled down.');
+  }
+  
+//Consider using queues: https://api.drupal.org/api/drupal/modules!system!system.queue.inc/group/queue/7
+  // Long-running operation example, leveraging a queue:
+  // Fetch feeds from other sites.
+  /*$result = db_query('SELECT * FROM {aggregator_feed} WHERE checked + refresh < :time AND refresh <> :never', array(
+    ':time' => REQUEST_TIME,
+    ':never' => AGGREGATOR_CLEAR_NEVER,
+  ));
+  $queue = DrupalQueue::get('aggregator_feeds');
+  foreach ($result as $feed) {
+    $queue->createItem($feed);
+  }*/
 }
