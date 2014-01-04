@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/rss1full.xsl"?><?xml-stylesheet type="text/css" media="screen" href="http://feeds.feedburner.com/~d/styles/itemcontent.css"?><!-- generator="FeedCreator 1.7.2" --><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://purl.org/rss/1.0/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://theoatmeal.com/feed/rss">
+        <title>The Oatmeal - Comics, Quizzes, &amp; Stories</title>
+        <description>The oatmeal tastes better than stale skittles found under the couch cushions</description>
+        <link>http://theoatmeal.com/</link>
+       <dc:date>2014-01-04T11:40:36+01:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://theoatmeal.com/blog/black_friday2013" />
+                <rdf:li rdf:resource="http://theoatmeal.com/comics/grump" />
+                <rdf:li rdf:resource="http://theoatmeal.com/comics/reasons_watch_movie" />
+                <rdf:li rdf:resource="http://theoatmeal.com/comics/sriracha_odor" />
+                <rdf:li rdf:resource="http://theoatmeal.com/blog/justdoitlater" />
+                <rdf:li rdf:resource="http://theoatmeal.com/blog/blerch_cosplay" />
+                <rdf:li rdf:resource="http://theoatmeal.com/comics/columbus_day" />
+                <rdf:li rdf:resource="http://theoatmeal.com/blog/bear_is_here" />
+                <rdf:li rdf:resource="http://theoatmeal.com/comics/las_vegas_ages" />
+            </rdf:Seq>
+        </items>
+    <atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rdf+xml" href="http://feeds.feedburner.com/oatmealfeed" /><feedburner:info xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" uri="oatmealfeed" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /></channel>
+    <item rdf:about="http://theoatmeal.com/blog/black_friday2013">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-11-29T06:26:55+01:00</dc:date>
+        <dc:source>http://theoatmeal.com</dc:source>
+        <dc:creator>Matthew Inman</dc:creator>
+        <title>Black Friday 2013</title>
+        <link>http://theoatmeal.com/blog/black_friday2013</link>
+        <description>&lt;a href="http://theoatmeal.com/blog/black_friday2013"&gt;&lt;img src="http://s3.amazonaws.com/theoatmeal-img/thumbnails/black_friday2013.png" alt="Black Friday 2013" class="border0" /&gt;&lt;/a&gt;&lt;p&gt;Stuff on sale.&lt;/p&gt;&lt;a href="http://theoatmeal.com/blog/black_friday2013"&gt;View&lt;/a&gt;</description>
+    </item>
+    <item rdf:about="http://theoatmeal.com/comics/grump">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-11-26T18:55:45+01:00</dc:date>
+        <dc:source>http://theoatmeal.com</dc:source>
+        <dc:creator>Matthew Inman</dc:creator>
+        <title>I have firsthand experience with an undead parrot</title>
+        <link>http://theoatmeal.com/comics/grump</link>
+        <description>&lt;a href="http://theoatmeal.com/comics/grump"&gt;&lt;img src="http://s3.amazonaws.com/theoatmeal-img/thumbnails/grump.png" alt="I have firsthand experience with an undead parrot" class="border0" /&gt;&lt;/a&gt;&lt;p&gt;&lt;/p&gt;&lt;a href="http://theoatmeal.com/comics/grump"&gt;View&lt;/a&gt;</description>
+    </item>
+    <item rdf:about="http://theoatmeal.com/comics/reasons_watch_movie">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-11-13T23:11:36+01:00</dc:date>
+        <dc:source>http://theoatmeal.com</dc:source>
+        <dc:creator>Matthew Inman</dc:creator>
+        <title>How to get me to watch a movie</title>
+        <link>http://theoatmeal.com/comics/reasons_watch_movie</link>
+        <description>&lt;a href="http://theoatmeal.com/comics/reasons_watch_movie"&gt;&lt;img src="http://s3.amazonaws.com/theoatmeal-img/thumbnails/reasons_watch_movie.png" alt="How to get me to watch a movie" class="border0" /&gt;&lt;/a&gt;&lt;p&gt;&lt;/p&gt;&lt;a href="http://theoatmeal.com/comics/reasons_watch_movie"&gt;View&lt;/a&gt;</description>
+    </item>
+    <item rdf:about="http://theoatmeal.com/comics/sriracha_odor">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-11-01T21:51:00+01:00</dc:date>
+        <dc:source>http://theoatmeal.com</dc:source>
+        <dc:creator>Matthew Inman</dc:creator>
+        <title>I think I have a solution to the Sriracha problem in California</title>
+        <link>http://theoatmeal.com/comics/sriracha_odor</link>
+        <description>&lt;a href="http://theoatmeal.com/comics/sriracha_odor"&gt;&lt;img src="http://s3.amazonaws.com/theoatmeal-img/thumbnails/sriracha_odor.png" alt="I think I have a solution to the Sriracha problem in California" class="border0" /&gt;&lt;/a&gt;&lt;p&gt;&lt;/p&gt;&lt;a href="http://theoatmeal.com/comics/sriracha_odor"&gt;View&lt;/a&gt;</description>
+    </item>
+    <item rdf:about="http://theoatmeal.com/blog/justdoitlater">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-10-22T22:45:40+01:00</dc:date>
+        <dc:source>http://theoatmeal.com</dc:source>
+        <dc:creator>Matthew Inman</dc:creator>
+        <title>Just do it later</title>
+        <link>http://theoatmeal.com/blog/justdoitlater</link>
+        <description>&lt;a href="http://theoatmeal.com/blog/justdoitlater"&gt;&lt;img src="http://s3.amazonaws.com/theoatmeal-img/thumbnails/justdoitlater.png" alt="Just do it later" class="border0" /&gt;&lt;/a&gt;&lt;p&gt;&lt;/p&gt;&lt;a href="http://theoatmeal.com/blog/justdoitlater"&gt;View&lt;/a&gt;</description>
+    </item>
+    <item rdf:about="http://theoatmeal.com/blog/blerch_cosplay">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-10-11T20:06:54+01:00</dc:date>
+        <dc:source>http://theoatmeal.com</dc:source>
+        <dc:creator>Matthew Inman</dc:creator>
+        <title>Blerch cosplay at New York Comic Con today</title>
+        <link>http://theoatmeal.com/blog/blerch_cosplay</link>
+        <description>&lt;a href="http://theoatmeal.com/blog/blerch_cosplay"&gt;&lt;img src="http://s3.amazonaws.com/theoatmeal-img/thumbnails/blerch_cosplay.png" alt="Blerch cosplay at New York Comic Con today" class="border0" /&gt;&lt;/a&gt;&lt;p&gt;MORE SNACKS!&lt;/p&gt;&lt;a href="http://theoatmeal.com/blog/blerch_cosplay"&gt;View&lt;/a&gt;</description>
+    </item>
+    <item rdf:about="http://theoatmeal.com/comics/columbus_day">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-10-10T00:00:00+01:00</dc:date>
+        <dc:source>http://theoatmeal.com</dc:source>
+        <dc:creator>Matthew Inman</dc:creator>
+        <title>Christopher Columbus was awful (but this other guy was not)</title>
+        <link>http://theoatmeal.com/comics/columbus_day</link>
+        <description>&lt;a href="http://theoatmeal.com/comics/columbus_day"&gt;&lt;img src="http://s3.amazonaws.com/theoatmeal-img/thumbnails/columbus_day.png" alt="Christopher Columbus was awful (but this other guy was not)" class="border0" /&gt;&lt;/a&gt;&lt;p&gt;Happy Bartolomé Day. &lt;/p&gt;&lt;a href="http://theoatmeal.com/comics/columbus_day"&gt;View&lt;/a&gt;</description>
+    </item>
+    <item rdf:about="http://theoatmeal.com/blog/bear_is_here">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-10-01T18:48:00+01:00</dc:date>
+        <dc:source>http://theoatmeal.com</dc:source>
+        <dc:creator>Matthew Inman</dc:creator>
+        <title>IT'S HERE!</title>
+        <link>http://theoatmeal.com/blog/bear_is_here</link>
+        <description>&lt;a href="http://theoatmeal.com/blog/bear_is_here"&gt;&lt;img src="http://s3.amazonaws.com/theoatmeal-img/thumbnails/bear_is_here.png" alt="IT'S HERE!" class="border0" /&gt;&lt;/a&gt;&lt;p&gt;Why Grizzly Bears Should Wear Underpants.&lt;/p&gt;&lt;a href="http://theoatmeal.com/blog/bear_is_here"&gt;View&lt;/a&gt;</description>
+    </item>
+    <item rdf:about="http://theoatmeal.com/comics/las_vegas_ages">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-09-26T22:36:20+01:00</dc:date>
+        <dc:source>http://theoatmeal.com</dc:source>
+        <dc:creator>Matthew Inman</dc:creator>
+        <title>Las Vegas at various ages</title>
+        <link>http://theoatmeal.com/comics/las_vegas_ages</link>
+        <description>&lt;a href="http://theoatmeal.com/comics/las_vegas_ages"&gt;&lt;img src="http://s3.amazonaws.com/theoatmeal-img/thumbnails/las_vegas_ages.png" alt="Las Vegas at various ages" class="border0" /&gt;&lt;/a&gt;&lt;p&gt;Have a Blurpee. &lt;/p&gt;&lt;a href="http://theoatmeal.com/comics/las_vegas_ages"&gt;View&lt;/a&gt;</description>
+    </item>
+</rdf:RDF>
